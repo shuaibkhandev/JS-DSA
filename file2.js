@@ -16,5 +16,21 @@
 //  What is Array Accessing?
 // Array Accessing means retrieving a specific element in the array using its index.
 
+
+
+
+// const data = [10,20,30,40,50,60,70,80,90];
+// document.getElementById('demo').innerHTML = `${data[2]}` //Accessing the third Element -> 30
+
+
+
+
+
 const data = [10,20,30,40,50,60,70,80,90];
-document.getElementById('demo').innerHTML = `${data[2]}` //Accessing the third Element -> 30
+const indexInput = document.getElementById("indexInput");
+function getValue(){
+    const index = Number(indexInput.value);
+    document.getElementById("demo").innerHTML =  data[index] ? `The Value of Index ${index} is ${data[index]}` : `Sorry index ${index} is not availble or might be wrong`
+}
+
+
