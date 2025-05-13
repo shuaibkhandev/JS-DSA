@@ -1,1 +1,27 @@
 // Insert Element in Array 
+
+const demo = document.getElementById("demo");
+// const arr = [10,23,43,11,50,24,45,8,16];
+
+// function InsertEle(){
+//     let input = document.getElementById("eleInput");
+//     let eleValue = Number(input.value);
+//     arr.push(eleValue);
+//     input.value = "";
+//     demo.innerHTML = arr
+//     console.log(arr);
+// }
+
+// function removeLastEle(){
+//     arr.pop(); 
+//     demo.innerHTML = arr;
+//         console.log(arr);
+// }
+
+
+const fruits = ["Banana", 'Mango', 'Apple', 'Peach', 'Strawberry'];
+fruits.splice(-1,0,"Orange","Grapes");
+console.log(fruits);
+
+
+
