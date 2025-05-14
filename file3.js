@@ -19,9 +19,25 @@ const demo = document.getElementById("demo");
 // }
 
 
-const fruits = ["Banana", 'Mango', 'Apple', 'Peach', 'Strawberry'];
-fruits.splice(-1,0,"Orange","Grapes");
-console.log(fruits);
+// const fruits = ["Banana", 'Mango', 'Apple', 'Peach', 'Strawberry'];
+// fruits.splice(-1,0,"Orange","Grapes");
+// console.log(fruits);
 
 
 
+const numArray = [1,2,3,4,5,6,7,8,9];
+
+const position = document.getElementById("position");
+const count = document.getElementById("count");
+const items = document.getElementById("items");
+
+function calledSpliceMethod(){
+
+   const newItems = items.value.split(",").map((item)=> Number(item.trim()))
+
+    numArray.splice(Number(position.value), Number(count.value), ...newItems);
+    document.getElementById('demo').innerHTML = numArray
+    console.log(numArray);
+}
+
+document.getElementById('demo').innerHTML = numArray
