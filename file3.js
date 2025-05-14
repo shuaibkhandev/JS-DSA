@@ -25,19 +25,33 @@ const demo = document.getElementById("demo");
 
 
 
-const numArray = [1,2,3,4,5,6,7,8,9];
+// const numArray = [1,2,3,4,5,6,7,8,9];
 
-const position = document.getElementById("position");
-const count = document.getElementById("count");
-const items = document.getElementById("items");
+// const position = document.getElementById("position");
+// const count = document.getElementById("count");
+// const items = document.getElementById("items");
 
-function calledSpliceMethod(){
+// function calledSpliceMethod(){
 
-   const newItems = items.value.split(",").map((item)=> Number(item.trim()))
+//    const newItems = items.value.split(",").map((item)=> Number(item.trim()))
 
-    numArray.splice(Number(position.value), Number(count.value), ...newItems);
-    document.getElementById('demo').innerHTML = numArray
-    console.log(numArray);
+//     numArray.splice(Number(position.value), Number(count.value), ...newItems);
+//     document.getElementById('demo').innerHTML = numArray
+//     console.log(numArray);
+// }
+
+// document.getElementById('demo').innerHTML = numArray
+
+
+let data = [10,20,40,50,60];
+const newEle = 30;
+const pos = 2;
+console.log(data);
+
+for(let i = data.length-1; i>=pos; i--){
+    data[i+1] = data[i]
+    if(i==pos){
+        data[i] = newEle;
+    }
 }
-
-document.getElementById('demo').innerHTML = numArray
+console.log(data);
